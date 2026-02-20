@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { LicenseProvider, useLicense } from './contexts/LicenseContext';
 import { ToastProvider } from './contexts/ToastContext';
@@ -62,7 +62,7 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ToastProvider>
         <LicenseProvider>
           <AuthProvider>
@@ -70,6 +70,6 @@ export default function App() {
           </AuthProvider>
         </LicenseProvider>
       </ToastProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
